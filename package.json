@@ -1,0 +1,26 @@
+{
+  "name": "@rdf-link/utils",
+  "version": "0.0.5",
+  "type": "module",
+  "exports": "./dist/mod.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdf-link/utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdf-link/utils/issues"
+  },
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
