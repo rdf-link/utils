@@ -1,7 +1,6 @@
 {
   "name": "@rdf-link/utils",
   "version": "0.0.1",
-  "description": "",
   "type": "module",
   "exports": "./dist/mod.js",
   "scripts": {
@@ -15,5 +14,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rdf-link/utils/issues"
-  }
+  },
+  "description": ""
 }
