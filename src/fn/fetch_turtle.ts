@@ -1,6 +1,6 @@
 import { HTTP } from "../const/http.js";
 
-export async function fetchTurtle(url) {
+export async function fetchTurtle(url: URL) {
   return (await fetch(
     url,
     {
