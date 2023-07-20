@@ -1,11 +1,13 @@
 {
   "name": "@rdf-link/utils",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "type": "module",
   "types": "./dist/mod.d.ts",
   "exports": "./dist/mod.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "license": "ISC",
   "author": "",
   "repository": {
