@@ -4,7 +4,10 @@
   "description": "",
   "type": "module",
   "types": "./dist/mod.d.ts",
-  "exports": "./dist/mod.js",
+  "exports": {
+    ".": "./dist/mod.js",
+    "./vocab": "./dist/vocab/mod.js"
+  },
   "files": [
     "dist"
   ],
