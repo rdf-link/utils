@@ -18,5 +18,5 @@ export const HTTP = {
   },
   mediaType: {
     turtle: "text/turtle",
-  }
-}
+  },
+};

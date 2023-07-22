@@ -41,4 +41,4 @@ export const XSD = {
   NMTOKEN: baseUri.concat("NMTOKEN"),
   Name: baseUri.concat("Name"),
   NCName: baseUri.concat("NCName"),
-}
+};
