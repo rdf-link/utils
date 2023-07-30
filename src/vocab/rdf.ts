@@ -1,0 +1,30 @@
+const iri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+
+export const RDF = {
+  namespace: {
+    iri,
+    prefix: "rdf",
+  },
+  Alt: iri.concat("Alt"),
+  Bag: iri.concat("Bag"),
+  CompoundLiteral: iri.concat("CompoundLiteral"),
+  HTML: iri.concat("HTML"),
+  JSON: iri.concat("JSON"),
+  List: iri.concat("List"),
+  PlainLiteral: iri.concat("PlainLiteral"),
+  Property: iri.concat("Property"),
+  Seq: iri.concat("Seq"),
+  Statement: iri.concat("Statement"),
+  XMLLiteral: iri.concat("XMLLiteral"),
+  direction: iri.concat("direction"),
+  first: iri.concat("first"),
+  langString: iri.concat("langString"),
+  language: iri.concat("language"),
+  nil: iri.concat("nil"),
+  object: iri.concat("object"),
+  predicate: iri.concat("predicate"),
+  rest: iri.concat("rest"),
+  subject: iri.concat("subject"),
+  type: iri.concat("type"),
+  value: iri.concat("value"),
+};
