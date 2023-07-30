@@ -16,6 +16,7 @@ export const RDF = {
   Seq: iri.concat("Seq"),
   Statement: iri.concat("Statement"),
   XMLLiteral: iri.concat("XMLLiteral"),
+  a: iri.concat("type"),
   direction: iri.concat("direction"),
   first: iri.concat("first"),
   langString: iri.concat("langString"),
