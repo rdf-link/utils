@@ -3,10 +3,17 @@
   "version": "0.0.12",
   "description": "",
   "type": "module",
+  "main": "./dist/mod.js",
   "types": "./dist/mod.d.ts",
   "exports": {
-    ".": "./dist/mod.js",
-    "./vocab": "./dist/vocab/mod.js"
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "import": "./dist/mod.js"
+    },
+    "./vocab": {
+      "types": "./dist/vocab/mod.d.ts",
+      "import": "./dist/vocab/mod.js"
+    }
   },
   "files": [
     "dist"
@@ -21,17 +28,28 @@
     "url": "https://github.com/rdf-link/utils/issues"
   },
   "scripts": {
+    "audit": "npm audit --production --audit-level=moderate",
     "build": "tsc",
-    "lint": "eslint --ignore-path .gitignore --fix .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:eslint -- --cache --fix && npm run lint:prettier -- --write",
+    "lint:ci": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --ignore-path .gitignore '**/*.{css,html,json,md,mdx,yml}'",
+    "test": "npm run test:unit",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose",
+    "test:e2e": ""
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
-    "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.1.6"
+    "@eslint/js": "^9",
+    "@jest/globals": "^30",
+    "@tsconfig/node-lts": "^22",
+    "@tsconfig/strictest": "^2",
+    "@types/jest": "^30",
+    "@types/node": "^22",
+    "eslint": "^9",
+    "jest": "^30",
+    "prettier": "^3",
+    "ts-jest": "^29",
+    "typescript": "^5",
+    "typescript-eslint": "^8"
   }
 }

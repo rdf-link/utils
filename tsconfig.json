@@ -1,13 +1,26 @@
 {
+  "extends": ["@tsconfig/node-lts", "@tsconfig/strictest"],
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM"],
-    "module": "ES2022",
-    "strict": true,
-    "sourceMap": true,
-    "sourceRoot": "https://github.com/rdf-link/utils/tree/main/src/",
-    "declaration": true
+    "lib": ["DOM"],
+
+    // ESM
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    // Enforce explicit type imports/exports
+    "verbatimModuleSyntax": true,
+
+    // Compile each file independently
+    "isolatedModules": true,
+
+    // Ensure imports casing matches files casing on disk
+    "forceConsistentCasingInFileNames": true,
+
+    // Library output
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   },
   "include": ["src/mod.ts"]
 }
